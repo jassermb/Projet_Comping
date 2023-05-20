@@ -1,0 +1,124 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+<style>
+
+    body {
+      background-image: url('image/for.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+    form {
+			background-color: rgba(228, 217, 217, 0.5);
+			padding: 50px;
+			border-radius: 10px;
+			margin: 50px auto;
+			width: 30%;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+		}
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+
+    input[type="text"] {
+      background-color: #EFEFEF;
+      border: none;
+      padding: 10px;
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+      color: #000000;
+      border-radius: 5px;
+      box-shadow: none;
+      margin-bottom: 20px;
+    }
+</style>
+
+<div class="example-wrapper">
+   <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion</title>
+    <link rel="stylesheet" href="style.css" media="screen" type="text/css" />
+</head>
+<body>  
+<style>
+.nn { 
+  background: linear-gradient(to right, #007bff, #ff8c00);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+  }
+ </style> 
+ <div  class ="nn"> 
+            <div id="container">
+            <span id="titre">
+            <h1>Réservation</h1>
+            <h1> Camping les flots bleus</h1>
+            </span>
+            <br>
+            <!-- zone de connexion -->
+    <form  action="traitement.php" method="POST" id="formReserv" >
+      <fieldset>
+
+        <ul>
+           <label for="nom">Nom : </label>  <input name="nom" type="text"  class="text-primary id="nom" required  /> 
+           <label for="prenom">Prénom : </label><input type="text" name="prenom" id="prenom" required  /><br /><br />
+            <label for="date_naissance">Date de Naissance : </label><input type="date" name="date_naissance" required id="date_naissance" /> <br /><br />
+             <label for="adresse">Adresse : </label><input type="text" name="adresse" required id="adresse" />
+           <label for="code_postal">Code Postal : </label><input type="text" name="code_postal" required id="code_postal" /><br /><br />
+            <label for="ville">Ville : </label><input type="text" name="ville" required id="ville" /></li>
+             <label for="telephone">Téléphone : </label><input type="text" name="telephone" id="telephone" required /><br /><br />
+            <label for="pays">Pays : </label><input type="text" name="pays" id="pays" required />
+           <label for="email">Email : </label><input type="email" name="email" id="email" /><br /><br />
+        </ul>
+        </fieldset>
+      <br>
+      <fieldset>
+        <label for="date_arrivee">Date d'arrivé : </label><input type="date" name="date_arrivee" id="date_arrivee" />
+        <label for="date_depart">Date de départ : </label><input type="date" name="date_depart" id="date_depart" /><br /><br />
+
+        <p>Sélectionner votre formule:</p>
+
+        <p>
+          <input type="radio" id="tente" name="id_location" value="1">
+          <label for="tente">Emplacement tente</label>
+        </p>
+        <p>
+          <input type="radio" id="camping_car" name="id_location" value="2">
+          <label for="camping_car">Emplacement Camping Car (eau + éléctricité)</label>
+        </p>
+        <p>
+          <input type="radio" id="caravane" name="id_location" value="3">
+          <label for="caravane">Caravane équipée</label>?
+        </p>
+        <p>
+          <input type="radio" id="mobilhome" name="id_location" value="4">
+          <label for="mobilhome">Mobil Home</label>
+        </p>
+ </fieldset>
+        <br><br>
+        
+        <input type="submit" class="btn btn-primary" id='submit' value='RESERVER' >
+          
+          <?php
+          if(isset($_GET['erreur'])){
+              $err = $_GET['erreur'];
+              if($err==1 ||      echo "<p style='color:red'>Durée 7 jours minimum pour les mobilhomes et caravanes</p> 
+          
+            </form>
+        </div>
+        </div>
+        
+	 
+	</div>
+
+	</body>
+    </html>
+
+    
+</div>
+{% endblock %}

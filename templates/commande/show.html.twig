@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Commande{% endblock %}
+
+{% block body %}
+    <center > <h1>Commande</h1> </center> 
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ commande.id }}</td>
+                <td> </td> 
+            </tr>
+            <tr> </tr> 
+            <tr>
+                <th>Nom</th>
+                <td>{{ commande.nom }}</td>
+                 <td> </td> 
+            </tr>
+            <tr> </tr> 
+            <tr>
+                <th>Prenom</th>
+                <td>{{ commande.prenom }}</td>
+                 <td> </td> 
+            </tr>
+            <tr> </tr> 
+            <tr>
+                <th>Ville</th>
+                <td>{{ commande.ville }}</td>
+            </tr>
+            <tr>
+                <th>Telephone</th>
+                <td>{{ commande.telephone }}</td>
+            </tr>
+            <tr>
+                <th>Methode_paiement</th>
+                <td>{{ commande.methodePaiement }}</td>
+            </tr>
+            <tr>
+                <th>Article</th>
+                <td>{{ commande.article }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_commande_index') }}">back to list</a>
+
+    <a href="{{ path('app_commande_edit', {'id': commande.id}) }}">edit</a>
+
+    {{ include('commande/_delete_form.html.twig') }}
+{% endblock %}

@@ -1,0 +1,228 @@
+{% extends 'base.html.twig' %}
+{% block title %}Unwind in the beauty of nature and enjoy a peaceful getaway at our campsite{% endblock %}
+{% block body %}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Liste roulante d'images</title>
+	<style>
+	body {
+		background-color: #cccccc;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+
+	}
+		#slider {
+			width: 500px;
+			height: 300px;
+			overflow: hidden;
+			margin: 0 auto;
+		}
+		#slider ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			width: 1500px;
+			height: 300px;
+			position: relative;
+			left: 0;
+			animation: slide 10s infinite;
+		}
+		#slider ul li {
+			float: left;
+			width: 500px;
+			height: 300px;
+		}
+		#slider ul li a {
+			display: block;
+			text-align: center;
+			margin-bottom: 10px;
+			font-weight: bold;
+			color: #333;
+			text-decoration: none;
+		}
+		#slider ul li img {
+			display: block;
+			margin: 0 auto;
+			max-width: 100%;
+			height: auto;
+		}
+		@keyframes slide {
+			0% {
+				left: 0;
+			}
+			20% {
+				left: 0;
+			}
+			25% {
+				left: -500px;
+			}
+			45% {
+				left: -500px;
+			}
+			50% {
+				left: -1000px;
+			}
+			70% {
+				left: -1000px;
+			}
+			75% {
+				left: -1500px;
+			}
+			95% {
+				left: -1500px;
+			}
+			100% {
+				left: 0;
+			}
+		}
+         ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      
+      li {
+        margin-bottom: 10px;
+      }
+      
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+	  image-style{
+		width: 1000px;
+        height: 500px;
+	  }
+	  .card-img-top {
+  /* Propriétés CSS pour la taille de l'image */
+  width: 200px;
+  height: 200px;
+  /* Propriétés CSS pour le style de l'image */
+
+  
+}
+	
+	</style>
+</head>
+<body>
+<h1> <center> discover the universe with us </center> </h1> <br>  
+ <center> 
+    <img src={{asset('image/ac11.jpg' ) }} alt="Notre entreprise"class="image-style"/>  </center> <br> 
+
+    <p> <strong> you dont' need therapy . you just need to go Camping </strong> </p>
+    <ul>
+      <li>   <strong> Notre histoire : </strong>    Welcome to our camping site! Our serene and peaceful campground i
+	  s nestled in the heart of nature, surrounded by towering trees and rolling hills. Whether you're a season
+	  ed camper or just looking for a weekend getaway, we have everything you need to enjoy the great outdoors. Our s
+	  ite offers a variety of amenities, including hiking trails, fishing ponds, and cozy cabins. We also have a spac
+	  ious communal area with fire pits and picnic tables, perfect for gathering with friends and family. Our friendly sta
+	  ff is here to help you make the most of your stay, so don't hesitate to ask for recommendations on local activities and attr
+	  actions. Come experience the tranquility of our campsite and create memories that will last a lifetime.     </li>
+      <li><strong>Notre équipe :</strong>Escape to nature and experience the great outdoors at our campground</li>
+      <li><strong>Notre engagement :</strong> Relax, recharge and rejuvenate with a camping trip at our serene campground..</li>
+    </ul>
+    <img src={{asset('image/4086.jpg')}} alt="Notre équipe" /> <br>
+	<div id="slider">
+		<ul>
+			<li>
+				<a href="#">
+					LIVE 
+				</a>
+				<img src={{asset('image/acceuil4.jpg')}} alt="LIVE ">
+			</li>
+			<li>
+				<a href="#">
+					LOVE
+				</a>
+				<img src={{asset('image/acceuil5.jpg')}} alt=" LOVE ">
+			</li>
+			<li>
+				<a href="#">
+					LAUGH 
+				</a>
+				<img src={{asset('image/acceuil7.jpg')}} alt=" LAUGH">
+			</li>
+			
+			
+		</ul>
+	</div>
+  <table> 
+  <td> 
+     <div class="card" style="width: 18rem;">
+  <img src={{asset('image/acbout.jpg')}}  class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">life is best when you're camping </h5>
+    <p class="card-text">Go where you deel most alive </p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">An item</li>
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>
+  </ul>
+  <div class="card-body">
+    <a href="/commande"" class="card-link">Ordre now  </a> 
+  </div>
+  </td> 
+  <td> 
+  <br> <br> </td> 
+    <td> 
+     <div class="card" style="width: 18rem;">
+  <img src={{asset('image/acbout2.jpg')}}  class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">life is best when you're camping </h5>
+    <p class="card-text">Go where you deel most alive </p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">An item</li>
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>
+  </ul>
+  <div class="card-body">
+    <a href="/commande"" class="card-link">Ordre now  </a> 
+  </div>
+  </td> 
+  <td>
+  <br> <br>  </td> 
+  <td> 
+     <div class="card" style="width: 18rem;">
+  <img src={{asset('image/3.png')}}  class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">life is best when you're camping </h5>
+    <p class="card-text">Go where you deel most alive </p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">An item</li>
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>
+  </ul>
+  <div class="card-body">
+    <a href="/commande"" class="card-link">Ordre now  </a> 
+  </div>
+  </td> 
+  <td> 
+     <div class="card" style="width: 18rem;">
+  <img src={{asset('image/b1.jpg')}}  class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">life is best when you're camping </h5>
+    <p class="card-text">Go where you deel most alive </p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">An item</li>
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>
+  </ul>
+  <div class="card-body">
+    <a href="/commande"" class="card-link">Ordre now  </a> 
+  </div>
+  </td> 
+</table> 
+</body>
+</html>
+{% endblock %}
+
+ 
+

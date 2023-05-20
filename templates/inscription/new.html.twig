@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Inscription{% endblock %}
+
+{% block body %}
+   <center >  <h1>Create new Inscription</h1> </center > 
+
+    {{ include('inscription/_form.html.twig') }}
+
+  {#  <a href="{{ path('app_inscription_index') }}">back to list</a> #}
+{% endblock %}

@@ -1,0 +1,19 @@
+{# templates/chemin/vers/votre/vue.html.twig #}
+
+<form method="post" action="{{ path('mon_nom_de_route') }}">
+    {{ form_start(form) }}
+
+    {{ form_row(form.nom) }}
+    {{ form_row(form.prenom) }}
+    {{ form_row(form.date) }}
+ {{ form_row(form.adresse) }}
+    {{ form_row(form.code_postal) }}
+    {{ form_row(form.telephone) }}
+    {{ form_row(form.email) }}
+    {{ form_row(form.date_depart) }}
+    {{ form_row(form.date_arrive) }}
+    
+
+    {{ form_end(form) }}
+    
+</form>

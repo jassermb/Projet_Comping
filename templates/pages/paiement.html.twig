@@ -1,0 +1,83 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+<style> 
+
+Voici un exemple de CSS pour le formulaire de paiement que nous avons créé précédemment. Bien sûr, vous pouvez personnaliser le style en fonction de vos préférences.
+
+css
+Copy code
+form {
+  width: 80%;
+  margin: auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="tel"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+input[type="file"] {
+  margin-bottom: 20px;
+}
+
+input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+</style> 
+
+<form action="process-payment.php" method="post" enctype="multipart/form-data">
+  <label for="payment-method">Méthode de paiement :</label>
+  <select id="payment-method" name="payment-method">
+    <option value="carte-credit">Carte de crédit</option>
+    <option value="paypal">PayPal</option>
+    <option value="virement-bancaire">Virement bancaire</option>
+  </select> <br> <br> 
+
+  <label for="ville">Ville :</label>
+  <select id="ville" name="ville">
+    <option value="paris">Mahdia</option>
+    <option value="marseille">Benzart</option>
+    <option value="lyon">Jendouba </option>
+    <option value="lyon">tebrka </option>
+    <option value="lyon">zaghouane </option>
+    <option value="lyon">kef </option>
+  </select> <br> <br> 
+
+  <label for="nom">Nom :</label>
+  <input type="text" id="nom" name="nom" required>  <br> <br>  
+
+  <label for="prenom">Prénom :</label>
+  <input type="text" id="prenom" name="prenom" required> <br> <br> 
+
+  <label for="telephone">Numéro de téléphone :</label>
+  <input type="tel" id="telephone" name="telephone" required> <br> <br> 
+
+  <label for="fichier">Fichier :</label>
+  <input type="file" id="fichier" name="fichier"> 
+
+  <input type="submit" value="Payer">
+</form>
+
+{% endblock %}
